@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Result">
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#bfbfbf</item>
+    </style>
+
+    <style name="Formula">
+        <item name="android:padding">10sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="NumberButton">
+        <item name="android:gravity">fill</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_height">122sp</item>
+        <item name="android:layout_width">95sp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">#4d4d4d</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="OperationButton">
+        <item name="android:gravity">fill</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_height">98sp</item>
+        <item name="android:layout_width">95sp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">#666</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+</resources>

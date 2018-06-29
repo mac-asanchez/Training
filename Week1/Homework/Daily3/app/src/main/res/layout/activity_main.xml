@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollView01"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/Profile_Picture"
+            android:contentDescription="@string/profile_name" />
+
+        <TextView
+            style="@style/Profile_Name"
+            android:text="@string/profile_name" />
+
+        <TextView
+            style="@style/Profile_Education"
+            android:text="@string/profile_education" />
+
+        <TextView
+            style="@style/Profile_Location_Address"
+            android:text="@string/profile_location_address" />
+
+        <TextView
+            style="@style/Profile_Location_City"
+            android:text="@string/profile_location_City" />
+
+        <TextView
+            style="@style/Profile_Hobbies_Title"
+            android:text="@string/profile_hobbies_title" />
+
+        <TextView
+            style="@style/Profile_Hobbies"
+            android:text="@string/profile_hobbies" />
+    </LinearLayout>
+</ScrollView>

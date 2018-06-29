@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Fri Jun 29 11:37:57 CDT 2018
+0.baseType=DIRECTORY
+0.base=C\:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Test\\Assessment1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

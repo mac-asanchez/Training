@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Daily3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rFR\\values-fr-rFR.xml",
+            "map": [
+                {
+                    "source": "C:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Daily3\\app\\src\\main\\res\\values-fr-rFR\\strings.xml",
+                    "from": {
+                        "startLines": "1,3,7,6,5,4,2",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "17,122,417,354,285,206,65",
+                        "endColumns": "46,82,113,61,67,77,55",
+                        "endOffsets": "59,200,526,411,348,279,116"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,102,185,299,361,429,507",
+                        "endColumns": "46,82,113,61,67,77,55",
+                        "endOffsets": "97,180,294,356,424,502,558"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyProfileApp</string>
+    <string name="profile_name">Arturo Sanchez</string>
+    <string name="profile_education">Computer Systems Engineer</string>
+    <string name="profile_location_address">3301 Windy Ridge Parkway</string>
+    <string name="profile_location_City">Atlanta, GA 30339</string>
+    <string name="profile_hobbies_title">Hobbies</string>
+    <string name="profile_hobbies">○ Play Football Soccer \n○ Walking \n○ Running \n○ Reading \n○ Playing Video Games</string>
+</resources>

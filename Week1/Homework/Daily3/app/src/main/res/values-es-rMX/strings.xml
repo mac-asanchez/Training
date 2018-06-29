@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MiPerfil</string>
+    <string name="profile_name">Arturo Sánchez</string>
+    <string name="profile_education">Ingeniero en Sistemas Computacionales</string>
+    <string name="profile_location_address">3301 Windy Ridge Parkway</string>
+    <string name="profile_location_City">Atlanta, GA 30339</string>
+    <string name="profile_hobbies_title">Pasatiempos</string>
+    <string name="profile_hobbies">○ Jugar Fútbol \n○ Caminar \n○ Correr \n○ Leer \n○ Jugar Videojuegos</string>
+</resources>

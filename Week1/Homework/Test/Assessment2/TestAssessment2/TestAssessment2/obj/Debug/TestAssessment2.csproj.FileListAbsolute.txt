@@ -1,0 +1,10 @@
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\bin\Debug\TestAssessment2.exe.config
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\bin\Debug\TestAssessment2.exe
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\bin\Debug\TestAssessment2.pdb
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\obj\Debug\TestAssessment2.csprojAssemblyReference.cache
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\obj\Debug\TestAssessment2.Form1.resources
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\obj\Debug\TestAssessment2.Properties.Resources.resources
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\obj\Debug\TestAssessment2.csproj.GenerateResource.cache
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\obj\Debug\TestAssessment2.csproj.CoreCompileInputs.cache
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\obj\Debug\TestAssessment2.exe
+C:\Proyectos\MAC_Training\6.25\Homeworks\Week1\Test\Assessment2\TestAssessment2\TestAssessment2\obj\Debug\TestAssessment2.pdb

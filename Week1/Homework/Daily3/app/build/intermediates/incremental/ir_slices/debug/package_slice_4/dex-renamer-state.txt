@@ -1,0 +1,4 @@
+#Wed Jun 27 14:10:38 CDT 2018
+base.0=C\:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Daily3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\22
+path.0=classes.dex
+renamed.0=classes.dex

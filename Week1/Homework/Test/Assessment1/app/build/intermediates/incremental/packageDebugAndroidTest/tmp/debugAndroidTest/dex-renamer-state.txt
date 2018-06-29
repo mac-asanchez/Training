@@ -1,0 +1,4 @@
+#Fri Jun 29 11:58:17 CDT 2018
+base.0=C\:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Test\\Assessment1\\app\\build\\intermediates\\transforms\\dexMerger\\androidTest\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
