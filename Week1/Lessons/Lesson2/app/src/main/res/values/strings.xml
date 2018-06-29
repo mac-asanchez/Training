@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="android_components">Android Components</string>
+    <string name="broadcast_receiver">Broadcast receiver</string>
+    <string name="contect_provider">Contect Provider</string>
+    <string name="activity">Activity</string>
+</resources>

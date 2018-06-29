@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HolaMundo</string>
+    <string name="android_components">Componentes de Android</string>
+    <string name="broadcast_receiver">Receptor de Emisión</string>
+    <string name="contect_provider">Proveedor de Contenido</string>
+    <string name="activity">Actividad</string>
+</resources>
