@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PersonsApp</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_lastname">Last Name</string>
+    <string name="hint_age">Age</string>
+    <string name="btnAddPerson">Add Person</string>
+    <string name="btnViewPersons">View Added Persons</string>
+</resources>

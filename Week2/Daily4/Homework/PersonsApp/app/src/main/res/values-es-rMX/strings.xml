@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Personas</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_lastname">Apellido</string>
+    <string name="hint_age">Edad</string>
+    <string name="btnAddPerson">Agregar Persona</string>
+    <string name="btnViewPersons">Ver Personas Agregadas</string>
+</resources>
