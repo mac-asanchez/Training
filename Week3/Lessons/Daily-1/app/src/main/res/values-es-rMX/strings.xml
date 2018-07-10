@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Almacenar Datos</string>
+    <string name="btnSaveData">Guardar info</string>
+    <string name="btnGetData">Obtener info</string>
+    <string name="SQLDataBase_DefaultName">Juan Pérez</string>
+    <string name="SQLDataBase_DefaultAge">23</string>
+    <string name="SQLDataBase_DefaultGender">Masculino</string>
+    <string name="btnSavePerson">Guardar Persona</string>
+    <string name="btnGetAllPersons">Obtener Personas</string>
+    <string name="btnSaveBook">Guardar Libro</string>
+    <string name="btnGetAllBooks">Obtener libros</string>
+</resources>

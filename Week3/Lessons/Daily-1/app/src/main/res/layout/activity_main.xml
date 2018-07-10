@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/etMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSaveData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="handleSharedPreferences"
+            android:text="@string/btnSaveData" />
+
+        <Button
+            android:id="@+id/btnGetData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="handleSharedPreferences"
+            android:text="@string/btnGetData" />
+
+        <TextView
+            android:id="@+id/tvMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp" />
+
+
+        <!--SQL database-->
+        <EditText
+            android:id="@+id/etPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SQLDataBase_DefaultName" />
+
+        <EditText
+            android:id="@+id/etPersonAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SQLDataBase_DefaultAge" />
+
+        <EditText
+            android:id="@+id/etPersonGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SQLDataBase_DefaultGender" />
+
+        <Button
+            android:id="@+id/btnSavePerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="handlingDataBase"
+            android:text="@string/btnSavePerson" />
+
+        <Button
+            android:id="@+id/btnGetAllPersons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="handlingDataBase"
+            android:text="@string/btnGetAllPersons" />
+
+        <!--UI to test Room database-->
+        <EditText
+            android:id="@+id/etBookISBN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etBookAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSaveBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onSaveBook"
+            android:text="@string/btnSaveBook" />
+
+        <Button
+            android:id="@+id/btnGetAllBooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onGetBooks"
+            android:text="@string/btnGetAllBooks" />
+    </LinearLayout>
+
+</ScrollView>

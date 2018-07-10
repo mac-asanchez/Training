@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">StoreData</string>
+    <string name="btnSaveData">Save data</string>
+    <string name="btnGetData">Get data</string>
+    <string name="SQLDataBase_DefaultName">John Doe</string>
+    <string name="SQLDataBase_DefaultAge">23</string>
+    <string name="SQLDataBase_DefaultGender">Male</string>
+    <string name="btnSavePerson">Save Person</string>
+    <string name="btnGetAllPersons">Get Persons</string>
+    <string name="btnSaveBook">Save Book</string>
+    <string name="btnGetAllBooks">Get All Books</string>
+</resources>
