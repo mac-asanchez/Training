@@ -7,17 +7,24 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.user.multithreading.event.HelloEvent;
 import com.example.user.multithreading.utils.Tagger;
 import com.example.user.multithreading.workers.MyAsyncTask;
 import com.example.user.multithreading.workers.MyRunnable;
 import com.example.user.multithreading.workers.MyThread;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 public class MainActivity extends AppCompatActivity
         implements Handler.Callback {
 
     private TextView tvMain;
     private Handler handler;
+    private TextView tvEventBus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,7 @@ public class MainActivity extends AppCompatActivity
         Log.d(Tagger.get(this), "onCreate: " + Thread.currentThread().getName());
 
         tvMain = findViewById(R.id.tvMain);
+        tvEventBus = findViewById(R.id.tvEventBus);
         handler = new Handler(this);
     }
 
@@ -59,5 +67,27 @@ public class MainActivity extends AppCompatActivity
     public boolean handleMessage(Message message) {
         tvMain.setText(message.getData().get("data").toString());
         return false;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventReceived(HelloEvent event) {
+        tvEventBus.setText(event.getData());
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onHelloEventReceived(HelloEvent event) {
+        Toast.makeText(this, event.getData(), Toast.LENGTH_SHORT).show();
     }
 }
