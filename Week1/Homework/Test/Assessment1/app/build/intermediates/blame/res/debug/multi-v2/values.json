@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Test\\Assessment1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Proyectos\\Training\\Training\\Week1\\Homework\\Test\\Assessment1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
-                {
-                    "source": "C:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Test\\Assessment1\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "52",
-                        "endOffsets": "65"
-                    },
-                    "to": {
-                        "startLines": "637",
-                        "startColumns": "4",
-                        "startOffsets": "54402",
-                        "endColumns": "52",
-                        "endOffsets": "54450"
-                    }
-                },
                 {
                     "source": "C:\\Users\\asc_s\\.gradle\\caches\\transforms-1\\files-1.1\\constraint-layout-1.1.2.aar\\60e66dcc916de3f0d16db1fcd6d6d3fa\\res\\values\\values.xml",
                     "from": {
@@ -78,7 +61,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Test\\Assessment1\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Proyectos\\Training\\Training\\Week1\\Homework\\Test\\Assessment1\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "52",
+                        "endOffsets": "65"
+                    },
+                    "to": {
+                        "startLines": "637",
+                        "startColumns": "4",
+                        "startOffsets": "54402",
+                        "endColumns": "52",
+                        "endOffsets": "54450"
+                    }
+                },
+                {
+                    "source": "C:\\Proyectos\\Training\\Training\\Week1\\Homework\\Test\\Assessment1\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -94,23 +94,6 @@
                         "endLines": "650",
                         "endColumns": "12",
                         "endOffsets": "55335"
-                    }
-                },
-                {
-                    "source": "C:\\Proyectos\\MAC_Training\\6.25\\Homeworks\\Week1\\Test\\Assessment1\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "157,57,105",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "198,99,151"
-                    },
-                    "to": {
-                        "startLines": "152,153,154",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "7669,7715,7762",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "7710,7757,7808"
                     }
                 },
                 {
@@ -130,6 +113,23 @@
                         "endLines": "177,178,535,536,537,538,539,540,541,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,574,575,581,582,586,587,588,589,590,591,597,639,1960,1964,1965,1969,1970,2107,2108",
                         "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66",
                         "endOffsets": "9230,9293,47790,47858,47930,48000,48061,48135,48208,49053,49114,49176,49240,49302,49363,49431,49531,49591,49657,49730,49799,49856,49908,49970,50495,50571,50845,50880,51072,51133,51190,51224,51259,51294,51639,54574,142576,142777,142887,143088,143217,154115,154182"
+                    }
+                },
+                {
+                    "source": "C:\\Proyectos\\Training\\Training\\Week1\\Homework\\Test\\Assessment1\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "157,57,105",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "198,99,151"
+                    },
+                    "to": {
+                        "startLines": "152,153,154",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "7669,7715,7762",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "7710,7757,7808"
                     }
                 }
             ]
