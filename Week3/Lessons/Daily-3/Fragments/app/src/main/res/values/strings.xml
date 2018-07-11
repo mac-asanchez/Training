@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Fragments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_red_fragment">Add red fragment</string>
+    <string name="add_blue_fragment">Add blue fragment</string>
+    <string name="remove_all_fragments">Remove all Fragments</string>
+    <string name="send_data_to_blue_frag">Send data to Blue frag</string>
+    <string name="some_data">Some Data</string>
+</resources>
