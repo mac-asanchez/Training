@@ -4,12 +4,35 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvCategoryDescription"
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cvMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:onClick="onCategorySelected"
-        android:textColor="@color/colorPrimary"
-        android:textSize="28sp" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivCategory"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitStart"/>
+
+            <TextView
+                android:id="@+id/tvCategoryDescription"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:onClick="onCategorySelected"
+                android:textColor="@color/colorPrimary"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
