@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -48,20 +49,26 @@ public class MainActivity extends AppCompatActivity implements
         List<Celebrity> celebrityList = DataCreator.getCelebrities();
         for (Celebrity celebrity : celebrityList) {
             if (celebrity.getCelebrityId() == CelebrityId) {
-                Details detailsFragment = (Details) fragmentManager.findFragmentById(R.id.flDetails);
-
-                if (detailsFragment == null) {
-                    detailsFragment = Details.newInstance(celebrity);
-
-                    fragmentManager.beginTransaction()
-                            .add(R.id.flDetails, detailsFragment, Details.STRING_TAG)
-                            .addToBackStack(null)
-                            .commit();
-                } else {
-                    detailsFragment.updateData(celebrity);
-                }
+                showCelebrityDetails(celebrity);
                 break;
             }
+        }
+    }
+
+    private void showCelebrityDetails(Celebrity celebrity) {
+        Details detailsFragment = (Details) fragmentManager.findFragmentById(R.id.flDetails);
+
+        if (detailsFragment == null) {
+            detailsFragment = Details.newInstance(celebrity);
+
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+            transaction.setCustomAnimations(R.animator.slide_in_left, R.animator.slide_in_right)
+                    .add(R.id.flDetails, detailsFragment, Details.STRING_TAG)
+                    .addToBackStack(null)
+                    .commit();
+        } else {
+            detailsFragment.updateData(celebrity);
         }
     }
 
