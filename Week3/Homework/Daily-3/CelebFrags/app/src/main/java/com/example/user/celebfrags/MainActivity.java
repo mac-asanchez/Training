@@ -12,7 +12,11 @@ import android.widget.Toast;
 import com.example.user.celebfrags.adapter.DataCreator;
 import com.example.user.celebfrags.model.Celebrity;
 
-public class MainActivity extends AppCompatActivity implements Celebrities.OnFragmentInteractionListener {
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements
+        Celebrities.OnFragmentInteractionListener,
+        Details.OnFragmentInteractionListener {
 
     private FragmentManager fragmentManager;
 
@@ -39,7 +43,26 @@ public class MainActivity extends AppCompatActivity implements Celebrities.OnFra
 
     public void onCelebritySelected(View view) {
         TextView tvCelebrity = (TextView) view;
-        tvCelebrity.getTag();
+        int CelebrityId = Integer.parseInt(tvCelebrity.getTag().toString());
+
+        List<Celebrity> celebrityList = DataCreator.getCelebrities();
+        for (Celebrity celebrity : celebrityList) {
+            if (celebrity.getCelebrityId() == CelebrityId) {
+                Details detailsFragment = (Details) fragmentManager.findFragmentById(R.id.flDetails);
+
+                if (detailsFragment == null) {
+                    detailsFragment = Details.newInstance(celebrity);
+
+                    fragmentManager.beginTransaction()
+                            .add(R.id.flDetails, detailsFragment, Details.STRING_TAG)
+                            .addToBackStack(null)
+                            .commit();
+                } else {
+                    detailsFragment.updateData(celebrity);
+                }
+                break;
+            }
+        }
     }
 
     @Override
