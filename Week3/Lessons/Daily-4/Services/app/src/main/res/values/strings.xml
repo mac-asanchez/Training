@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Services</string>
+    <string name="start_normal_service">Start normal service</string>
+    <string name="stop_normal_service">Stop normal service</string>
+    <string name="start_intent_service">Start intent service</string>
+    <string name="bound_to_service">Bound to service</string>
+    <string name="get_data_from_service">Get data from service</string>
+    <string name="unbind_from_service">Unbind from service</string>
+    <string name="schedule_job">Schedule Job</string>
+    <string name="start_service_on_new_process">Start service on new process</string>
+</resources>
