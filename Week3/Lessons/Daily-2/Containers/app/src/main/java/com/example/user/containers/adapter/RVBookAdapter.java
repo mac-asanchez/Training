@@ -16,17 +16,35 @@ import java.util.List;
 public class RVBookAdapter extends RecyclerView.Adapter<RVBookAdapter.ViewHolder> {
     List<Book> books;
     public static final String TAG = RVBookAdapter.class.getSimpleName() + "_TAG";
-    
+
     public RVBookAdapter(List<Book> books) {
         this.books = books;
     }
-    
+
+    @Override
+    public int getItemViewType(int position) {
+        Book book = books.get(position);
+        if (book.getISBN().equals("BOOK-3")) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.d(TAG, "onCreateViewHolder: ");
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.book_list_item, parent, false);
-        
+        int currentLayout;
+
+        if (viewType == 1) {
+            currentLayout = R.layout.book_list_item2;
+        } else {
+            currentLayout = R.layout.book_list_item;
+        }
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(currentLayout, parent, false);
+
         return new ViewHolder(view);
     }
 
