@@ -45,6 +45,7 @@ public class RV_AnimalsAdapter extends RecyclerView.Adapter<RV_AnimalsAdapter.Vi
         holder.tvAnimalDescription.setText(animal.getAnimalDescription());
         holder.tvAnimalDescription.setTag(animal.getAnimalId());
 
+        //region Show picture
         /*switch (animal.getAnimalId()) {
             case 1:
                 holder.ivAnimal.setBackgroundResource(R.drawable.bear);
@@ -87,6 +88,7 @@ public class RV_AnimalsAdapter extends RecyclerView.Adapter<RV_AnimalsAdapter.Vi
                 holder.ivAnimal.setBackgroundResource(R.drawable.zoo_wallpaper);
                 break;
         }*/
+        //endregion
 
         holder.bind(animals.get(position), listener);
     }

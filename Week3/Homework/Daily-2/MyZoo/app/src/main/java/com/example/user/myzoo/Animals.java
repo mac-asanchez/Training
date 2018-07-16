@@ -22,10 +22,10 @@ public class Animals extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animals);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_animals);
 
-        populateAnimals();
+            populateAnimals();
     }
 
     private void populateAnimals() {
