@@ -1,15 +1,22 @@
 package com.example.user.mymusicplayer.Services;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.example.user.mymusicplayer.Model.Constants;
 import com.example.user.mymusicplayer.Model.RVSongAdapter;
 import com.example.user.mymusicplayer.Model.Song;
+import com.example.user.mymusicplayer.R;
 
 import java.util.List;
 import java.util.Objects;
@@ -46,8 +53,30 @@ public class MySongsBroadcast extends BroadcastReceiver {
             @Override
             public void onItemClick(Song song) {
                 startService(song);
+                scheduleNotification(getNotification("Song "+ song.getTitle()), 5000);
             }
         };
+    }
+
+    private void scheduleNotification(Notification notification, int delay) {
+        Toast.makeText(ctx, "scheduleNotification", Toast.LENGTH_SHORT).show();
+
+        Intent notificationIntent = new Intent(ctx, NotificationPublisher.class);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(ctx, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager)ctx.getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+    }
+
+    private Notification getNotification(String content) {
+        Notification.Builder builder = new Notification.Builder(ctx);
+        builder.setContentTitle("Scheduled Notification");
+        builder.setContentText(content);
+        builder.setSmallIcon(R.drawable.ic_player_play);
+        return builder.build();
     }
 
     private void startService(Song song) {
