@@ -44,7 +44,6 @@ public class RVSongAdapter extends RecyclerView.Adapter<RVSongAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Log.d(TAG, "onCreateViewHolder: ");
         int currentLayout;
 
         currentLayout = R.layout.song_list_item;
@@ -64,7 +63,6 @@ public class RVSongAdapter extends RecyclerView.Adapter<RVSongAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder: " + holder.toString());
         Song song = Songs.get(position);
         holder.imgAlbum.setBackgroundResource(song.getAlbumnPicture());
         holder.imgAlbum.setContentDescription(song.getDetail());

@@ -1,7 +1,6 @@
 package com.example.user.services;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -64,6 +63,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPlayerButton(View view) {
-        Toast.makeText(this, view.getId(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, view.getId(), Toast.LENGTH_SHORT).show();
     }
 }

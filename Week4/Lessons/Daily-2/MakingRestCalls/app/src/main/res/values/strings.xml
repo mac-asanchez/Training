@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MakingRestCalls</string>
+    <string name="native_http">Native HTTP</string>
+</resources>

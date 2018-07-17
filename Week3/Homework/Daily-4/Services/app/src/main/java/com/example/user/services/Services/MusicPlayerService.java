@@ -18,7 +18,9 @@ import com.example.user.services.R;
 
 public class MusicPlayerService extends Service {
     private static final int NOTIFICATION_ID = 1;
+    private final String TAG = MusicPlayerService.class.getSimpleName() + "_TAG";
     public MediaPlayer mediaPlayer;
+    Notification status;
 
     public MusicPlayerService() {
     }
@@ -26,6 +28,7 @@ public class MusicPlayerService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
+        Log.d(TAG, "onStartCommand: " + intent.getAction());
         if (intent.getAction().equals(Constants.ACTION.STARTFOREGROUND_ACTION)) {
             Song song = intent.getParcelableExtra("Song");
             showNotification(song);
@@ -33,25 +36,22 @@ public class MusicPlayerService extends Service {
 
         } else if (intent.getAction().equals(Constants.ACTION.PREV_ACTION)) {
             Toast.makeText(this, "Clicked Previous", Toast.LENGTH_SHORT).show();
-            Log.d(LOG_TAG, "Clicked Previous");
+            Log.d(TAG, "Clicked Previous");
         } else if (intent.getAction().equals(Constants.ACTION.PLAY_ACTION)) {
             Toast.makeText(this, "Clicked Play", Toast.LENGTH_SHORT).show();
-            Log.d(LOG_TAG, "Clicked Play");
+            Log.d(TAG, "Clicked Play");
         } else if (intent.getAction().equals(Constants.ACTION.NEXT_ACTION)) {
             Toast.makeText(this, "Clicked Next", Toast.LENGTH_SHORT).show();
-            Log.d(LOG_TAG, "Clicked Next");
+            Log.d(TAG, "Clicked Next");
         } else if (intent.getAction().equals(
                 Constants.ACTION.STOPFOREGROUND_ACTION)) {
-            Log.d(LOG_TAG, "Received Stop Foreground Intent");
+            Log.d(TAG, "Received Stop Foreground Intent");
             Toast.makeText(this, "Service Stoped", Toast.LENGTH_SHORT).show();
             stopForeground(true);
             stopSelf();
         }
         return START_STICKY;
     }
-
-    Notification status;
-    private final String LOG_TAG = "NotificationService";
 
     private void showNotification(Song song) {
         //region Play Music
@@ -112,17 +112,17 @@ public class MusicPlayerService extends Service {
         //endregion
 
         //region Set on click Listener
-        views.setOnClickPendingIntent(R.id.status_bar_play, pplayIntent);
-        bigViews.setOnClickPendingIntent(R.id.status_bar_play, pplayIntent);
-
-        views.setOnClickPendingIntent(R.id.status_bar_next, pnextIntent);
-        bigViews.setOnClickPendingIntent(R.id.status_bar_next, pnextIntent);
-
-        views.setOnClickPendingIntent(R.id.status_bar_prev, ppreviousIntent);
-        bigViews.setOnClickPendingIntent(R.id.status_bar_prev, ppreviousIntent);
-
-        views.setOnClickPendingIntent(R.id.status_bar_collapse, pcloseIntent);
-        bigViews.setOnClickPendingIntent(R.id.status_bar_collapse, pcloseIntent);
+//        views.setOnClickPendingIntent(R.id.status_bar_play, pplayIntent);
+//        bigViews.setOnClickPendingIntent(R.id.status_bar_play, pplayIntent);
+//
+//        views.setOnClickPendingIntent(R.id.status_bar_next, pnextIntent);
+//        bigViews.setOnClickPendingIntent(R.id.status_bar_next, pnextIntent);
+//
+//        views.setOnClickPendingIntent(R.id.status_bar_prev, ppreviousIntent);
+//        bigViews.setOnClickPendingIntent(R.id.status_bar_prev, ppreviousIntent);
+//
+//        views.setOnClickPendingIntent(R.id.status_bar_collapse, pcloseIntent);
+//        bigViews.setOnClickPendingIntent(R.id.status_bar_collapse, pcloseIntent);
         //endregion
 
         //region set pause image
