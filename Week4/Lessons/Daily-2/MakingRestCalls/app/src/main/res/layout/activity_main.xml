@@ -9,19 +9,69 @@
 
     <!--usign native call-->
     <Button
-        android:onClick="onNativeCall"
         android:id="@+id/btnNativeCall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onNativeCall"
         android:text="@string/native_http" />
 
+    <!--okhttp-->
+    <Button
+        android:id="@+id/btnOkhttpSync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onOkhttp"
+        android:text="Sync HTTP" />
+
+    <Button
+        android:id="@+id/btnOkhttpAsync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onOkhttp"
+        android:text="ASync HTTP" />
+
+    <!--Retrofit-->
+    <Button
+        android:id="@+id/btnRetroSync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRetrofit"
+        android:text="Retrofit (Sync)" />
+
+    <Button
+        android:id="@+id/btnRetroAsync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRetrofit"
+        android:text="Retrofit (Async)" />
+
+    <Button
+        android:id="@+id/btnRetroRxJava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRetrofit"
+        android:text="Retrofit (RxJAva)" />
+
+    <Button
+        android:id="@+id/btnRetroRxJavaCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRetrofit"
+        android:text="Retrofit (RxJAva) Custom" />
+
+    <Button
+        android:id="@+id/btnRetroRxJavaCustomUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRetrofit"
+        android:text="Retrofit (RxJAva) Custom User" />
+
+    <!--Result-->
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
         android:textSize="20sp" />
-
-    <!---->
 
 </LinearLayout>
