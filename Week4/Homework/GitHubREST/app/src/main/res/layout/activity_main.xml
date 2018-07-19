@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivProfilePicture"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:contentDescription="@string/profile_picture_description" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnSeeRepositories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRepositoriesClicked"
+        android:text="Repositories" />
+
+</LinearLayout>

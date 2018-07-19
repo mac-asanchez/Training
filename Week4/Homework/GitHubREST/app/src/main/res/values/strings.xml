@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GitHubREST</string>
+    <string name="profile_picture_description">Profile Picture</string>
+</resources>
