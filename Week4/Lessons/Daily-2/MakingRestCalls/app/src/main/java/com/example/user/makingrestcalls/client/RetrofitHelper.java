@@ -30,7 +30,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public class RetrofitHelper {
-    public static final String TAG = RetrofitHelper.class.getSimpleName().toString() + "_TAG";
+    private static final String TAG = RetrofitHelper.class.getSimpleName() + "_TAG";
     private static final String BASE_URL = "https://randomuser.me/";
 
     private Retrofit createClient() {
@@ -172,7 +172,7 @@ public class RetrofitHelper {
                 });
     }
 
-    public interface ListCallBack{
+    public interface ListCallBack {
 
         void onResults(List<Result> resultList);
     }
