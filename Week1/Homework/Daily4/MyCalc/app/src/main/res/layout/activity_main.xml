@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llFormula"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="100%">
+
+        <TextView
+            android:id="@+id/tvFormula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Result"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/glButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/llFormula"
+        android:columnCount="5"
+        android:rowCount="4"
+        app:layout_heightPercent="80%"
+        app:layout_widthPercent="100%">
+
+        <!--region 7, 8, 9-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="8" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="9" />
+        <!--endregion-->
+
+        <!--region Operations-->
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="4"
+            android:columnCount="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onDelete"
+                android:text="Del" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onDivision"
+                android:text="÷" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onMultiplication"
+                android:text="x" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onsubtraction"
+                android:text="-" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onAddition"
+                android:text="+" />
+        </GridLayout>
+        <!--endregion-->
+
+        <!--region Operations-->
+        <GridLayout
+            android:id="@+id/glOtherButtons"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="4"
+            android:columnCount="1"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onRootSquare"
+                android:text="√" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onsPow2"
+                android:text="x²" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onPow3"
+                android:text="x³" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onNumber"
+                android:text=")" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:onClick="onNumber"
+                android:text="(" />
+        </GridLayout>
+        <!--endregion-->
+
+        <!--region 4, 5, 6-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="5" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="6" />
+        <!--endregion-->
+
+        <!--region 1, 2, 3-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="3" />
+        <!--endregion-->
+
+        <!--region ., 0, =-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="." />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onNumber"
+            android:text="0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="onResult"
+            android:text="=" />
+        <!--endregion-->
+    </GridLayout>
+
+</android.support.percent.PercentRelativeLayout>
