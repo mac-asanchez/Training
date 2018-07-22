@@ -1,3 +1,87 @@
 <resources>
-    <string name="app_name">MyZoo</string>
+    <string name="app_name">My Zoo</string>
+    
+    <!--region Bear-->
+    <string name="bear">Bear</string>
+    <string name="bear_detail">Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans.</string>
+    <string name="bear_sound_url">http://c0026106.cdn1.cloudfiles.rackspacecloud.com/65b790212fb846efb133c0ce746801ff_bear-001.mp3</string>
+    <string name="bear_image_url">https://i.kym-cdn.com/entries/icons/mobile/000/010/639/confessbear.jpg</string>
+    <!--endregion-->
+
+    <!--region Kangaroo-->
+    <string name="kangaroo">Kangaroo</string>
+    <string name="kangaroo_detail">The kangaroo is a marsupial from the family Macropodidae (macropods, meaning "large foot"). In common use the term is used to describe the largest species from this family</string>
+    <string name="kangaroo_sound_url">https://s3.amazonaws.com/wildambienceassets/wp-content/uploads/2018/03/02145410/Kangaroo-Eastern-Grey-T66-Capertee-NP-River-Dawn_SD702_21stAug15.mp3</string>
+    <string name="kangaroo_image_url">https://us-east-1.tchyn.io/snopes-production/uploads/2010/01/kangaroo.jpg</string>
+    <!--endregion-->
+
+    <!--region tiger-->
+    <string name="tiger">Tiger</string>
+    <string name="tiger_detail">The tiger (Panthera tigris) is the largest cat species, most recognizable for its pattern of dark vertical stripes on reddish-orange fur with a lighter underside.</string>
+    <string name="tiger_sound_url">http://c0026106.cdn1.cloudfiles.rackspacecloud.com/5d8ba373d9c448c2be23540fd2cd6201_bengal-tiger-001.mp3</string>
+    <string name="tiger_image_url">http://www.abc.net.au/news/image/7318414-3x2-940x627.jpg</string>
+    <!--endregion-->
+
+    <!--region colibri-->
+    <string name="colibri">Colibri</string>
+    <string name="colibri_detail">The violetears are hummingbirds of the genus Colibri. They are medium to large species found in Mexico, and Central and northern South America.</string>
+    <string name="colibri_sound_url">https://d1ia71hq4oe7pn.cloudfront.net/sound/535882.mp3</string>
+    <string name="colibri_image_url">https://upload.wikimedia.org/wikipedia/commons/d/db/Colibri-thalassinus-001-edit.jpg</string>
+    <!--endregion-->
+
+    <!--region eagle-->
+    <string name="eagle">Eagle</string>
+    <string name="eagle_detail">Eagle is the common name for many large birds of prey of the family Accipitridae. Eagles belong to several groups of genera, not all of which are closely related. Most of the 60 species of eagle are from Eurasia and Africa.</string>
+    <string name="eagle_sound_url">http://c0026106.cdn1.cloudfiles.rackspacecloud.com/7c788041e1aa47cc89a354e5e801518e_eagle-001.mp3</string>
+    <string name="eagle_image_url">http://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_bald_eagle.jpg</string>
+    <!--endregion-->
+
+    <!--region owl-->
+    <string name="owl">Owl</string>
+    <string name="owl_detail">Owls are birds from the order Strigiformes, which includes about 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.</string>
+    <string name="owl_sound_url">https://www.google.com/logos/fnbx/animal_sounds/owl.mp3</string>
+    <string name="owl_image_url">https://youtopiaproject.com/wp-content/uploads/2015/08/Owl.jpg</string>
+    <!--endregion-->
+
+    <!--region    banded_fish-->
+    <string name="banded_fish">Banded Archer Fish</string>
+    <string name="banded_fish_detail">The banded archerfish (Toxotes jaculatrix) is a brackish water perciform fish of the archerfish genus Toxotes. It is silvery in colour and has a dorsal fin towards the posterior end.</string>
+    <string name="banded_fish_sound_url">https://www.google.com/logos/fnbx/animal_sounds/humpback-whale.mp3</string>
+    <string name="banded_fish_image_url">http://www.aquariumofpacific.org/images/made/images/olc/68archerfish_600_441_80auto.jpg</string>
+    <!--endregion-->
+
+    <!--region    cichlid-->
+    <string name="cichlid">Cichlid</string>
+    <string name="cichlid_detail">Cichlids /ˈsɪklɪdz/ are fish from the family Cichlidae in the order Perciformes. Cichlids are members of a suborder known as Labroidei, along with the wrasses (Labridae), damselfishes (Pomacentridae), and surfperches (Embiotocidae).</string>
+    <string name="cichlid_sound_url">https://www.google.com/logos/fnbx/animal_sounds/humpback-whale.mp3</string>
+    <string name="cichlid_image_url">https://i2.wp.com/www.petcareguyd.com/wp-content/uploads/2017/12/cichlid_Aulonocara.jpg</string>
+    <!--endregion-->
+
+    <!--region    koi-->
+    <string name="koi">Koi</string>
+    <string name="koi_detail">Koi or more specifically nishikigoi, literally "brocaded carp"), are colored varieties of Common carp (Cyprinus carpio) that are kept for decorative purposes in outdoor koi ponds or water gardens.</string>
+    <string name="koi_sound_url">https://www.google.com/logos/fnbx/animal_sounds/humpback-whale.mp3</string>
+    <string name="koi_image_url">https://wallpapercave.com/wp/M7rzd4x.jpg</string>
+    <!--endregion-->
+
+    <!--region    crocodile-->
+    <string name="crocodile">Crocodile</string>
+    <string name="crocodile_detail">Crocodiles (subfamily Crocodylinae) or true crocodiles are large aquatic reptiles that live throughout the tropics in Africa, Asia, the Americas and Australia.</string>
+    <string name="crocodile_sound_url">https://www.google.com/logos/fnbx/animal_sounds/alligator.mp3</string>
+    <string name="crocodile_image_url">http://dynamicpeople.club/wp-content/uploads/2017/11/crocodile-wallpaper-crocodile-dangerous-reptile-muzzle-predator-wallpaper-crocodile-wallpaper-black.jpg</string>
+    <!--endregion-->
+
+    <!--region    snake-->
+    <string name="snake">Snake</string>
+    <string name="snake_detail">Snakes are elongated, legless, carnivorous reptiles of the suborder Serpentes. Like all squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales.</string>
+    <string name="snake_sound_url">https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-14566/zapsplat_animals_snake_spit_004_14697.mp3?_=10</string>
+    <string name="snake_image_url">https://amazingpict.com/wp-content/uploads/2014/04/Angry-Snake-Wallpaper-HD.jpg</string>
+    <!--endregion-->
+
+    <!--region    tortoise-->
+    <string name="tortoise">Tortoise</string>
+    <string name="tortoise_detail">Tortoises are a family, Testudinidae. Testudinidae is a Family under the order Testudines and suborder Cryptodira. There are fourteen extant families of the order Testudines, an order of reptile commonly known as turtles, tortoises, and terrapins.</string>
+    <string name="tortoise_sound_url">https://www.myinstants.com/media/sounds/tortuuga-.mp3</string>
+    <string name="tortoise_image_url">https://images.alphacoders.com/212/212191.jpg</string>
+    <!--endregion-->
 </resources>

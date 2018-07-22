@@ -13,8 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LocalDataSource extends SQLiteOpenHelper {
+    Context context;
+
     public LocalDataSource(Context context) {
         super(context, LocalDataContract.Table.ANIMAL, null, LocalDataContract.VERSION);
+        this.context = context;
     }
 
     @Override
@@ -23,13 +26,13 @@ public class LocalDataSource extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(LocalDataContract.DDL.CREATE_ANIMAL_TABLE);
 
         //region fill categories
-        for(String insert: LocalDataContract.DML.INSERT_CATEGORIES_QUERIES()) {
+        for (String insert : LocalDataContract.DML.INSERT_CATEGORIES_QUERIES()) {
             sqLiteDatabase.execSQL(insert);
         }
         //endregion
 
         //region fill animals
-        for(String insert: LocalDataContract.DML.INSERT_ANIMALS_QUERIES()) {
+        for (String insert : LocalDataContract.DML.INSERT_ANIMALS_QUERIES(context)) {
             sqLiteDatabase.execSQL(insert);
         }
         //endregion
@@ -92,7 +95,7 @@ public class LocalDataSource extends SQLiteOpenHelper {
         List<Animal> animalList = new ArrayList<>();
 
         //Cursor to fetch through the results
-        Cursor cursor = database.rawQuery(LocalDataContract.DML.GET_ANIMALS_BY_CATEGORY, new String[]{ String.valueOf(CategoryId)});
+        Cursor cursor = database.rawQuery(LocalDataContract.DML.GET_ANIMALS_BY_CATEGORY, new String[]{String.valueOf(CategoryId)});
 
         //Loop to create the list of Animals
         if (cursor.moveToFirst()) {
@@ -100,10 +103,11 @@ public class LocalDataSource extends SQLiteOpenHelper {
                 Animal animal = new Animal(
                         cursor.getInt(cursor.getColumnIndex(LocalDataContract.Animal.ID)),
                         cursor.getInt(cursor.getColumnIndex(LocalDataContract.Animal.CATEGORYID)),
+                        cursor.getString(cursor.getColumnIndex(LocalDataContract.Category.DESCRIPTION)),
                         cursor.getString(cursor.getColumnIndex(LocalDataContract.Animal.DESCRIPTION)),
                         cursor.getString(cursor.getColumnIndex(LocalDataContract.Animal.DETAIL)),
-                        cursor.getString(cursor.getColumnIndex(LocalDataContract.Category.DESCRIPTION)),
-                        cursor.getString(cursor.getColumnIndex(LocalDataContract.Animal.SOUND))
+                        cursor.getString(cursor.getColumnIndex(LocalDataContract.Animal.SOUND)),
+                        cursor.getString(cursor.getColumnIndex(LocalDataContract.Animal.IMAGEURL))
                 );
 
                 animalList.add(animal);

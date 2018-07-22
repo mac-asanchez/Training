@@ -1,5 +1,6 @@
 package com.example.user.myzoo.model.Entity;
 
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -9,15 +10,17 @@ public class Animal implements Parcelable {
     String CategoryDescription;
     String AnimalDescription;
     String Detail;
-    String Sound;
+    String SoundUrl;
+    String ImageUrl;
 
-    public Animal(int animalId, int categoryId, String animalDescription, String detail, String categoryDescription, String sound) {
+    public Animal(int animalId, int categoryId, String categoryDescription, String animalDescription, String detail, String soundUrl, String imageUrl) {
         AnimalId = animalId;
         CategoryId = categoryId;
+        CategoryDescription = categoryDescription;
         AnimalDescription = animalDescription;
         Detail = detail;
-        CategoryDescription = categoryDescription;
-        Sound = sound;
+        SoundUrl = soundUrl;
+        ImageUrl = imageUrl;
     }
 
     protected Animal(Parcel in) {
@@ -26,7 +29,8 @@ public class Animal implements Parcelable {
         CategoryDescription = in.readString();
         AnimalDescription = in.readString();
         Detail = in.readString();
-        Sound = in.readString();
+        SoundUrl = in.readString();
+        ImageUrl = in.readString();
     }
 
     public static final Creator<Animal> CREATOR = new Creator<Animal>() {
@@ -40,18 +44,6 @@ public class Animal implements Parcelable {
             return new Animal[size];
         }
     };
-
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "AnimalId=" + AnimalId +
-                ", CategoryId=" + CategoryId +
-                ", CategoryDescription='" + CategoryDescription + '\'' +
-                ", AnimalDescription='" + AnimalDescription + '\'' +
-                ", Detail='" + Detail + '\'' +
-                ", Sound='" + Sound + '\'' +
-                '}';
-    }
 
     public int getAnimalId() {
         return AnimalId;
@@ -67,6 +59,14 @@ public class Animal implements Parcelable {
 
     public void setCategoryId(int categoryId) {
         CategoryId = categoryId;
+    }
+
+    public String getCategoryDescription() {
+        return CategoryDescription;
+    }
+
+    public void setCategoryDescription(String categoryDescription) {
+        CategoryDescription = categoryDescription;
     }
 
     public String getAnimalDescription() {
@@ -85,20 +85,24 @@ public class Animal implements Parcelable {
         Detail = detail;
     }
 
-    public String getCategoryDescription() {
-        return CategoryDescription;
+    public String getSoundUrl() {
+        return SoundUrl;
     }
 
-    public void setCategoryDescription(String categoryDescription) {
-        CategoryDescription = categoryDescription;
+    public Uri getSoundUri() {
+        return Uri.parse(SoundUrl);
     }
 
-    public String getSound() {
-        return Sound;
+    public void setSoundUrl(String soundUrl) {
+        SoundUrl = soundUrl;
     }
 
-    public void setSound(String sound) {
-        Sound = sound;
+    public String getImageUrl() {
+        return ImageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        ImageUrl = imageUrl;
     }
 
     @Override
@@ -113,6 +117,7 @@ public class Animal implements Parcelable {
         parcel.writeString(CategoryDescription);
         parcel.writeString(AnimalDescription);
         parcel.writeString(Detail);
-        parcel.writeString(Sound);
+        parcel.writeString(SoundUrl);
+        parcel.writeString(ImageUrl);
     }
 }

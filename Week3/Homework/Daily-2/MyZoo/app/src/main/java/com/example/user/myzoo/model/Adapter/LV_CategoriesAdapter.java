@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.user.myzoo.R;
 import com.example.user.myzoo.model.Entity.Category;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,21 +43,25 @@ public class LV_CategoriesAdapter extends ArrayAdapter<Category> {
 
         switch (category.getCategoryId()) {
             case 1:
-                ivCategory.setBackgroundResource(R.drawable.mammals);
+                //ivCategory.setBackgroundResource(R.drawable.mammals);
+                Picasso.get().load(getContext().getResources().getString(R.string.bear_image_url)).into(ivCategory);
                 break;
             case 2:
-                ivCategory.setBackgroundResource(R.drawable.birds);
+                Picasso.get().load(getContext().getResources().getString(R.string.eagle_image_url)).into(ivCategory);
+                //ivCategory.setBackgroundResource(R.drawable.birds);
                 break;
             case 3:
-                ivCategory.setBackgroundResource(R.drawable.fish);
+                Picasso.get().load(getContext().getResources().getString(R.string.banded_fish_image_url)).into(ivCategory);
+                //ivCategory.setBackgroundResource(R.drawable.fish);
                 break;
             case 4:
-                ivCategory.setBackgroundResource(R.drawable.snake);
+                Picasso.get().load(getContext().getResources().getString(R.string.crocodile_image_url)).into(ivCategory);
+                //ivCategory.setBackgroundResource(R.drawable.snake);
                 break;
             default:
                 ivCategory.setBackgroundResource(R.drawable.zoo_wallpaper);
                 break;
-        }
+    }
 
         //endregion
 

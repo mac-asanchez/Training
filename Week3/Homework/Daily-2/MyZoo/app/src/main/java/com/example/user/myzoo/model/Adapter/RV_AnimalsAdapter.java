@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.user.myzoo.R;
 import com.example.user.myzoo.model.Entity.Animal;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -45,50 +46,7 @@ public class RV_AnimalsAdapter extends RecyclerView.Adapter<RV_AnimalsAdapter.Vi
         holder.tvAnimalDescription.setText(animal.getAnimalDescription());
         holder.tvAnimalDescription.setTag(animal.getAnimalId());
 
-        //region Show picture
-        /*switch (animal.getAnimalId()) {
-            case 1:
-                holder.ivAnimal.setBackgroundResource(R.drawable.bear);
-                break;
-            case 2:
-                holder.ivAnimal.setBackgroundResource(R.drawable.kangaroo);
-                break;
-            case 3:
-                holder.ivAnimal.setBackgroundResource(R.drawable.tiger);
-                break;
-            case 4:
-                holder.ivAnimal.setBackgroundResource(R.drawable.colibri);
-                break;
-            case 5:
-                holder.ivAnimal.setBackgroundResource(R.drawable.eagle);
-                break;
-            case 6:
-                holder.ivAnimal.setBackgroundResource(R.drawable.owl);
-                break;
-            case 7:
-                holder.ivAnimal.setBackgroundResource(R.drawable.bandedarcherfish);
-                break;
-            case 8:
-                holder.ivAnimal.setBackgroundResource(R.drawable.cichlid);
-                break;
-            case 9:
-                holder.ivAnimal.setBackgroundResource(R.drawable.koi);
-                break;
-            case 10:
-                holder.ivAnimal.setBackgroundResource(R.drawable.crocodile);
-                break;
-            case 11:
-                holder.ivAnimal.setBackgroundResource(R.drawable.snake2);
-                break;
-            case 12:
-                holder.ivAnimal.setBackgroundResource(R.drawable.tortoise);
-                break;
-
-            default:
-                holder.ivAnimal.setBackgroundResource(R.drawable.zoo_wallpaper);
-                break;
-        }*/
-        //endregion
+        Picasso.get().load(animal.getImageUrl()).into(holder.ivAnimal);
 
         holder.bind(animals.get(position), listener);
     }
