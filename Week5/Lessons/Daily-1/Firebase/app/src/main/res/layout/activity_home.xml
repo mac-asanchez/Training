@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSignOutClick"
+        android:text="Sign out" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Database" />
+
+    <EditText
+        android:id="@+id/etUploadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnUploadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onUploadDataClick"
+        android:text="Upload Data" />
+
+    <Button
+        android:id="@+id/btnUploadPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onUploadPersonClick"
+        android:text="Upload Person" />
+
+    <Button
+        android:id="@+id/btnReadPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onReadPeopleClick"
+        android:text="Read People" />
+
+</LinearLayout>
