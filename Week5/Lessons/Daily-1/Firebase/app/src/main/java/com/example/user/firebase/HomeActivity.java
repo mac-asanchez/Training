@@ -1,6 +1,11 @@
 package com.example.user.firebase;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +17,7 @@ import com.example.user.firebase.Security.Callback;
 import com.example.user.firebase.Security.SignOutCallback;
 import com.example.user.firebase.data.RemoteDatabaseManager;
 import com.example.user.firebase.data.model.Person;
+import com.example.user.firebase.utils.Constants;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Random;
@@ -22,6 +28,7 @@ public class HomeActivity extends AppCompatActivity implements SignOutCallback {
     private AuthManager authManager;
     private RemoteDatabaseManager remoteDatabaseManager;
     private EditText etData;
+    private MyBroadcastReceiver myBroadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,5 +72,58 @@ public class HomeActivity extends AppCompatActivity implements SignOutCallback {
 
     public void onReadPeopleClick(View view) {
         remoteDatabaseManager.readPeople();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        myBroadcastReceiver = new MyBroadcastReceiver();
+        IntentFilter intentFilter = new IntentFilter(Constants.ACTION_RECEIVED_POST);
+        registerReceiver(myBroadcastReceiver, intentFilter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(myBroadcastReceiver);
+    }
+
+    private void showDialog(final String postId, final String postMessage) {
+        final AlertDialog alertDialog = new AlertDialog.Builder(this)
+                .setTitle("New incoming post")
+                .setMessage("New post: " + postMessage)
+                .setNegativeButton("Later", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Log.d(TAG, "onLaterButtonClicked: ");
+                        dialogInterface.dismiss();
+                    }
+                })
+                .setPositiveButton("Open", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(getApplicationContext(), PostActivity.class);
+                        intent.putExtra("postId", postId);
+                        intent.putExtra("postMessage", postMessage);
+                        startActivity(intent);
+                    }
+                })
+                .create();
+
+        alertDialog.show();
+    }
+
+    public class MyBroadcastReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            if (intent.getAction() == Constants.ACTION_RECEIVED_POST) {
+                String postId = intent.getStringExtra(Constants.POST_ID);
+                String postMessage = intent.getStringExtra(Constants.POST_MESSAGE);
+
+                showDialog(postId, postMessage);
+            }
+        }
     }
 }
