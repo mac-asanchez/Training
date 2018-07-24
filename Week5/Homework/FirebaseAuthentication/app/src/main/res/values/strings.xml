@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirebaseAuthentication</string>
+    <string name="facebook_app_id">340490223158049</string>
+    <string name="fb_login_protocol_scheme">fb340490223158049</string>
+    <string name="twitter_consumer_key">dxe18XPuJR1SJcYb73Gi009ig</string>
+    <string name="twitter_consumer_secret">nInfzg0hDcssGDVhqrmi9PU24mQZxyHS1KAlozvF09xjsc20pG</string>
+</resources>
