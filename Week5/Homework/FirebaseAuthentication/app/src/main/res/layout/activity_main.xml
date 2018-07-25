@@ -57,4 +57,11 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
 
+    <Button
+        android:id="@+id/btnLoginPhone"
+        android:text="LOGIN WITH PHONE"
+        android:onClick="onLoginPhoneClicked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
