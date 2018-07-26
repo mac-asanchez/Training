@@ -1,14 +1,50 @@
 package com.example.user.mvp_dagger.view.github;
 
+import com.example.user.mvp_dagger.model.data.remote.RemoteDataSource;
+import com.example.user.mvp_dagger.model.github.Repo;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
 public class GithubPresenter implements GithubContract.Presenter {
+
     GithubContract.View view;
+    RemoteDataSource remoteDataSource;
+
+    @Inject
+    public GithubPresenter(RemoteDataSource remoteDataSource) {
+        this.remoteDataSource = remoteDataSource;
+    }
+
+
 
     @Override
     public void validateName(String name) {
+
         if (name.equals("something"))
             view.showError("This is not a valid name.");
         else
             view.onValidationResults("Mr/Mrs " + name);
+
+
+    }
+
+    @Override
+    public void getRepos(String username) {
+
+        remoteDataSource.getRepos(username, new RemoteDataSource.Callback() {
+            @Override
+            public void onRemoteResponse(List<Repo> repos) {
+                view.onRepoResult(repos);
+            }
+
+            @Override
+            public void onRemoteFailure(String error) {
+                view.showError(error);
+
+            }
+        });
     }
 
     @Override
