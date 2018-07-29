@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill"
+    android:layout_margin="0dp"
+    android:gravity="fill"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCoffeeSelected"
+        android:paddingTop="10dp"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCoffeeSelected"
+        android:paddingBottom="10dp" />
+
+    <ImageView
+        android:id="@+id/ivCoffeeImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="Coffee"
+        android:onClick="onCoffeeSelected"
+        android:paddingBottom="20dp" />
+
+</LinearLayout>
