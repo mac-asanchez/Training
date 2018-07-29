@@ -46,6 +46,7 @@ public class PermissionManager {
         } else {
             // Permission has already been granted
             Log.d(TAG, "checkPermission: Permission Granted");
+            callback.onPermissionResults(MY_PERMISSIONS_REQUEST_READ_CONTACTS, true);
         }
     }
 

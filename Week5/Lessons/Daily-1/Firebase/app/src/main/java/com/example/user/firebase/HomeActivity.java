@@ -42,6 +42,7 @@ public class HomeActivity extends AppCompatActivity implements SignOutCallback {
         remoteDatabaseManager = RemoteDatabaseManager.getInstance();
     }
 
+    //region Authentication
     public void onSignOutClick(View view) {
         Log.d(TAG, "onSignOutClick: ");
         authManager.signOut();
@@ -53,7 +54,9 @@ public class HomeActivity extends AppCompatActivity implements SignOutCallback {
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
     }
+    //endregion
 
+    //region Database
     public void onUploadDataClick(View view) {
         Log.d(TAG, "onUploadDataClick: ");
         remoteDatabaseManager.uploadData(etData.getText().toString());
@@ -73,7 +76,9 @@ public class HomeActivity extends AppCompatActivity implements SignOutCallback {
     public void onReadPeopleClick(View view) {
         remoteDatabaseManager.readPeople();
     }
+    //endregion
 
+    //region Cloud Messaging
     @Override
     protected void onStart() {
         super.onStart();
@@ -126,4 +131,5 @@ public class HomeActivity extends AppCompatActivity implements SignOutCallback {
             }
         }
     }
+    //endregion
 }
