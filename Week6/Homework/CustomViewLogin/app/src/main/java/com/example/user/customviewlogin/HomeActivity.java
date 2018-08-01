@@ -17,10 +17,9 @@ public class HomeActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: ");
 
-        ImageView ivImage = findViewById(R.id.ivHomeImage);
         MyButton myButton = findViewById(R.id.btnCustom);
 
         String ImageUrl = "https://img.memecdn.com/open-the-jar_o_973817.jpg";
-        myButton.setImage(ImageUrl, this);
+        myButton.setImage(ImageUrl);
     }
 }
