@@ -41,9 +41,6 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
 
-        <service
-            android:name=".model.data.location.MyIntentGeoFencingService"
-            android:exported="false"></service>
     </application>
 
 </manifest>

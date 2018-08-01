@@ -1,0 +1,54 @@
+package com.example.user.customviewlogin.custom;
+
+import android.app.Activity;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewParent;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.example.user.customviewlogin.R;
+import com.squareup.picasso.Picasso;
+
+public class MyButton extends android.support.v7.widget.AppCompatButton {
+    private static final String TAG = MyButton.class.getSimpleName() + "_TAG";
+    String imageUrl;
+    ImageView iv;
+
+    public MyButton(Context context) {
+        super(context);
+        Log.d(TAG, "MyButton: ");
+        init(context, null, 0, 0);
+    }
+
+    public MyButton(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        Log.d(TAG, "MyButton: ");
+        init(context, attrs, 0, 0);
+    }
+
+    public MyButton(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        Log.d(TAG, "MyButton: ");
+        init(context, attrs, defStyleAttr, 0);
+    }
+
+    public void init(final Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        Log.d(TAG, "init: ");
+        this.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG, "onClick: " + imageUrl);
+                Picasso.get().load(imageUrl).into(iv);
+            }
+        });
+    }
+
+    public void setImage(String imageUrl, Activity activity) {
+        Log.d(TAG, "setImage: ");
+        this.imageUrl = imageUrl;
+        this.iv = activity.findViewById(R.id.ivHomeImage);
+    }
+}

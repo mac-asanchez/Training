@@ -32,18 +32,19 @@ public class LocationManager extends LocationCallback {
 
     @SuppressLint("MissingPermission")
     public void getCurrentLocation() {
-        client.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
-            @Override
-            public void onSuccess(Location location) {
-                callback.onLocationResults(location);
-            }
-        })
-        .addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                callback.onLocationResults(null);
-            }
-        });
+        client.getLastLocation()
+                .addOnSuccessListener(new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        callback.onLocationResults(location);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        callback.onLocationResults(null);
+                    }
+                });
     }
 
     public void getLocationUpdates() {
@@ -73,15 +74,15 @@ public class LocationManager extends LocationCallback {
     }
 
     @SuppressLint("MissingPermission")
-    public void startLocationUpdates(){
+    public void startLocationUpdates() {
         getLocationUpdates();
 
         if (true) {
-            locationCallback = new LocationCallback(){
+            locationCallback = new LocationCallback() {
                 @Override
                 public void onLocationResult(LocationResult locationResult) {
                     super.onLocationResult(locationResult);
-                    for (Location location: locationResult.getLocations()) {
+                    for (Location location : locationResult.getLocations()) {
                         callback.onLocationResults(location);
                     }
                 }

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CustomViewLogin</string>
+    <string name="email_hint">Your email goes here</string>
+    <string name="password_hint">Your Pasword goes here</string>
+    <string name="btn_login_text">Login</string>
+    <string name="btn_register_text">Register</string>
+</resources>
