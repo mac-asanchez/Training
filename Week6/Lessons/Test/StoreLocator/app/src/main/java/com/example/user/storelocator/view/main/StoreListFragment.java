@@ -4,11 +4,17 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.user.storelocator.R;
+import com.example.user.storelocator.model.adapter.RVStoreAdapter;
+import com.example.user.storelocator.model.dominos.Store;
+
+import java.util.List;
 
 
 /**
@@ -20,11 +26,11 @@ import com.example.user.storelocator.R;
  * create an instance of this fragment.
  */
 public class StoreListFragment extends Fragment {
+    public static final String STRING_TAG = StoreListFragment.class.getSimpleName();
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -91,6 +97,16 @@ public class StoreListFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    public void updateData(List<Store> storeList) {
+        RecyclerView rvStores = getActivity().findViewById(R.id.rvStores);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        RVStoreAdapter adapter = new RVStoreAdapter(storeList);
+
+        rvStores.setLayoutManager(layoutManager);
+        rvStores.setAdapter(adapter);
     }
 
     /**

@@ -9,14 +9,12 @@
 
     <FrameLayout
         android:id="@+id/flZipCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight=".30" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <FrameLayout
         android:id="@+id/flDetails"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight=".70" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

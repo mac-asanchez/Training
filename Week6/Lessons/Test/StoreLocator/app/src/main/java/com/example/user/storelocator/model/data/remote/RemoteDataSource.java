@@ -48,25 +48,23 @@ public class RemoteDataSource {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
                     String strResponse = response.body().string();
-                    Log.d(TAG, "onResponse: " + strResponse);
-                    JSONObject jsonObject = new JSONObject(strResponse);
                     List<Store> storeList = new ArrayList<>();
 
-                    String address = jsonObject.getJSONObject("Address").toString();
-                    JSONArray jsonArray = jsonObject.getJSONArray("Stores");
-                    Log.d(TAG, "onResponse: jsonArray: " + jsonArray.length());
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        Log.d(TAG, "onResponse: i: " + i);
-                        int storeId = ((JSONObject)jsonArray.get(i)).getInt("StoreID");
-                        String hourDescription ="";
-                        try {
-                            hourDescription = ((JSONObject) jsonArray.get(i)).get("ServiceHoursDescription").toString();
-                        } catch (Exception e){
+                    // get Response String
+                    JSONObject jsonObject = new JSONObject(strResponse);
 
+                    JSONArray jsonArray = jsonObject.getJSONArray("Stores");
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        try {
+                            int storeId = ((JSONObject) jsonArray.get(i)).getInt("StoreID");
+                            String address = ((JSONObject) jsonArray.get(i)).get("AddressDescription").toString();
+                            String hourDescription = ((JSONObject) jsonArray.get(i)).get("HoursDescription").toString();
+                            storeList.add(new Store(storeId, address, hourDescription));
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                        storeList.add(new Store(storeId, address, hourDescription));
                     }
-                    Log.d(TAG, "onResponse: final");
+
                     callback.onRemoteResponse(storeList);
                 } catch (IOException | JSONException e) {
                     e.printStackTrace();
@@ -83,6 +81,7 @@ public class RemoteDataSource {
 
     public interface Callback {
         void onRemoteResponse(List<Store> stores);
+
         void onRemoteFailure(String error);
     }
 }
