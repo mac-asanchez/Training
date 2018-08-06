@@ -31,4 +31,16 @@ dependencies {
 
 //    ZXing (Zebra crossing)
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+//    Room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+//    LeakCanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+
+//    Flurry
+    // Required for Flurry Analytics integration
+    implementation 'com.flurry.android:analytics:11.1.1@aar'
 }

@@ -1,16 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnScan"
-        android:text="Scan Barcode"
-        android:onClick="onScanBarCode"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="onScanBarCode"
+        android:text="Scan Barcode" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/llProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etBarCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Barcode" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name"
+            android:inputType="text"
+            android:nextFocusDown="@id/etBrand" />
+
+        <EditText
+            android:id="@+id/etBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Brand"
+            android:inputType="text"
+            android:nextFocusDown="@id/etDescription" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Description"
+            android:inputType="text"
+            android:nextFocusDown="@id/etDetail" />
+
+        <EditText
+            android:id="@+id/etDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Detail"
+            android:inputType="text"
+            android:nextFocusDown="@id/btnSaveProduct" />
+
+        <Button
+            android:id="@+id/btnSaveProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onProductSave"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCancel"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>
